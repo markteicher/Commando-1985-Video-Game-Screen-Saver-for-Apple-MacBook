@@ -9,16 +9,14 @@ Commando 1985 as a vertically scrolling run and gun shooter developed by CapCom.
 A macOS `.saver` screen saver project written in Swift with
 `ScreenSaver.framework`.
 
-The project presents an autonomous, vertically scrolling, 1980s-style
-top-down military arcade scene. All current graphics are generated
-programmatically in Swift. No external sprite sheets, images, audio
+All current graphics are generated programmatically in Swift. No external sprite sheets, images, audio
 files, or original game assets are required.
 
 ------------------------------------------------------------------------
 
 # Project Contents
 
-The project should contain:
+The project contains:
 
 ``` text
 CommandoScreenSaver_COMPLETE/
