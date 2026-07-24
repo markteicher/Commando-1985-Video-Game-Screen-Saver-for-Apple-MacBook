@@ -945,4 +945,3 @@ That bundle---not the `.xcodeproj`---is the actual screen saver.
 
 The `.xcodeproj` is the development project used to create it.
 ````
-
