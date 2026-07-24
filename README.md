@@ -2,7 +2,7 @@
 Commando 1985 as a vertically scrolling run and gun shooter developed by CapCom. This is a screen saver for Command 1985 video game players
 
 
-![InterBase](docs/images/interbase_logo.jpeg)
+![InterBase](docs/images/command_1985.jpeg)
 
 # CommandoScreenSaver
 
