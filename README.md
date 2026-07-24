@@ -14,7 +14,7 @@ files, or original game assets are required.
 
 ------------------------------------------------------------------------
 
-# 1. Project Contents
+# Project Contents
 
 The project should contain:
 
@@ -44,7 +44,7 @@ This `.saver` bundle is the installable macOS screen saver.
 
 ------------------------------------------------------------------------
 
-# 2. Requirements
+#  Requirements
 
 Recommended development environment:
 
@@ -64,7 +64,7 @@ Apple notarization should be used.
 
 ------------------------------------------------------------------------
 
-# 3. Open the Project
+# Open the Project
 
 1.  Unzip the project.
 2.  Open the resulting folder in Finder.
@@ -85,7 +85,7 @@ Do not open an individual `.swift` file instead of the `.xcodeproj`.
 
 ------------------------------------------------------------------------
 
-# 4. Verify the Target
+# Verify the Target
 
 In Xcode:
 
@@ -112,44 +112,10 @@ CommandoScreenSaver.saver
 
 ------------------------------------------------------------------------
 
-# 5. Signing
-
-Select:
-
-``` text
-Project
-→ TARGETS
-→ CommandoScreenSaver
-→ Signing & Capabilities
-```
-
-For development on your own Mac:
-
-1.  Enable automatic signing if Xcode requires signing.
-2.  Select your Apple Development Team.
-3.  Leave the bundle identifier unique.
-
-The supplied project uses:
-
-``` text
-com.markteicher.CommandoScreenSaver
-```
-
-If Xcode reports that the identifier conflicts with another project or
-account, change it to another unique reverse-domain identifier.
-
-Example:
-
-``` text
-com.yourname.CommandoScreenSaver
-```
-
-Changing the bundle identifier does not change the visible screen saver
-name.
 
 ------------------------------------------------------------------------
 
-# 6. Required Build Settings
+# Required Build Settings
 
 Select:
 
@@ -223,7 +189,7 @@ installation on older supported Macs.
 
 ------------------------------------------------------------------------
 
-# 7. ScreenSaver.framework
+# ScreenSaver.framework
 
 The target must link Apple's:
 
@@ -254,7 +220,7 @@ import ScreenSaver
 
 ------------------------------------------------------------------------
 
-# 8. Principal Screen Saver Class
+# Principal Screen Saver Class
 
 The screen saver entry point is:
 
@@ -282,11 +248,11 @@ to load in System Settings.
 
 ------------------------------------------------------------------------
 
-# 9. Source File Responsibilities
+# Source File Responsibilities
 
 ## CommandoScreenSaverView.swift
 
-This is the macOS screen saver entry point.
+This is the Apple macOS screen saver entry point.
 
 It:
 
@@ -391,7 +357,7 @@ pixel-art graphics.
 
 ------------------------------------------------------------------------
 
-# 10. Resources and Resource Tags
+# Resources and Resource Tags
 
 The current project does **not** require external resources.
 
@@ -431,7 +397,7 @@ verify that they appear in **Copy Bundle Resources**.
 
 ------------------------------------------------------------------------
 
-# 11. Build the Screen Saver
+# Build the Screen Saver
 
 For a normal development build:
 
@@ -457,23 +423,9 @@ compiler errors before attempting installation.
 
 ------------------------------------------------------------------------
 
-# 12. Build a Release Version
 
-For the package you intend to keep or distribute, use a Release build.
 
-In Xcode:
-
-1.  Open **Product → Scheme → Edit Scheme**.
-2.  Select **Run** or the relevant build action.
-3.  Set the build configuration as required.
-
-For a distributable build, Release configuration is preferred.
-
-The project already contains Debug and Release configurations.
-
-------------------------------------------------------------------------
-
-# 13. Locate CommandoScreenSaver.saver
+# Locate CommandoScreenSaver.saver
 
 After a successful build, look in Xcode's Project Navigator for:
 
@@ -504,15 +456,14 @@ The installable product is the `.saver`.
 
 ------------------------------------------------------------------------
 
-# 14. Install on the Development Mac
+#  Install on the Development Mac
 
-Once you locate:
+
 
 ``` text
 CommandoScreenSaver.saver
 ```
 
-double-click it in Finder.
 
 macOS should present the screen saver installation interface.
 
@@ -537,7 +488,7 @@ Test the preview before relying on automatic screen saver activation.
 
 ------------------------------------------------------------------------
 
-# 15. Manual Installation
+# Manual Installation
 
 If double-click installation is not appropriate, a user-level screen
 saver can be placed in:
@@ -566,36 +517,8 @@ System-wide installation can require administrator privileges.
 
 ------------------------------------------------------------------------
 
-# 16. Replacing an Older Build
 
-When rebuilding during development, macOS may still have an older copy
-installed.
-
-Before testing a replacement:
-
-1.  Quit System Settings if it is displaying the screen saver.
-2.  Locate:
-
-``` text
-~/Library/Screen Savers/
-```
-
-3.  Remove the old:
-
-``` text
-CommandoScreenSaver.saver
-```
-
-4.  Build the new version.
-5.  Install the newly built `.saver`.
-6.  Reopen System Settings.
-7.  Test the screen saver again.
-
-This avoids accidentally testing an older installed bundle.
-
-------------------------------------------------------------------------
-
-# 17. Clean Build
+# Clean Build
 
 If Xcode appears to use stale build products:
 
@@ -617,7 +540,7 @@ Command-B
 
 ------------------------------------------------------------------------
 
-# 18. Common Error: Project Will Not Open
+# Common Error: Project Will Not Open
 
 If Xcode reports:
 
@@ -635,7 +558,7 @@ structure.
 
 ------------------------------------------------------------------------
 
-# 19. Common Error: Enemy Initializer Is Inaccessible
+# Common Error: Enemy Initializer Is Inaccessible
 
 An earlier project version could report:
 
@@ -657,7 +580,7 @@ The complete regenerated project already contains this correction.
 
 ------------------------------------------------------------------------
 
-# 20. Common Error: Screen Saver Builds but Does Not Load
+# Common Error: Screen Saver Builds but Does Not Load
 
 Check these items in order.
 
@@ -699,22 +622,8 @@ Finally, remove any old installed version and reinstall the newly built
 
 ------------------------------------------------------------------------
 
-# 21. Common Error: Signing Failure
 
-If Xcode reports a signing error:
-
-1.  Select the project.
-2.  Select the `CommandoScreenSaver` target.
-3.  Open **Signing & Capabilities**.
-4.  Select your Development Team.
-5.  Verify the bundle identifier is unique.
-6.  Build again.
-
-For local development, automatic signing is normally sufficient.
-
-------------------------------------------------------------------------
-
-# 22. Common Error: Missing ScreenSaver.framework
+# Common Error: Missing ScreenSaver.framework
 
 If Xcode cannot resolve `ScreenSaverView` or reports:
 
@@ -743,7 +652,7 @@ import ScreenSaver
 
 ------------------------------------------------------------------------
 
-# 23. Copy Bundle Resources
+# Copy Bundle Resources
 
 For this version, the expected state is effectively:
 
@@ -761,7 +670,7 @@ Do not add files simply to make this section non-empty.
 
 ------------------------------------------------------------------------
 
-# 24. Compile Sources
+# Compile Sources
 
 Under:
 
@@ -787,23 +696,9 @@ If one is missing, add it to the target's Compile Sources phase.
 
 ------------------------------------------------------------------------
 
-# 25. Packaging for Your Own Mac
 
-For personal use, the basic package is simply:
 
-``` text
-CommandoScreenSaver.saver
-```
-
-Build it, install it, and select it in System Settings.
-
-No DMG is required for personal installation.
-
-No resource tags are required.
-
-------------------------------------------------------------------------
-
-# 26. Packaging for Another Mac
+# 26. Packaging 
 
 For informal transfer to another Mac, the `.saver` can be placed in a
 ZIP archive.
@@ -825,7 +720,7 @@ notarization.
 
 ------------------------------------------------------------------------
 
-# 27. Developer ID Distribution
+# Developer ID Distribution
 
 For distribution outside the Mac App Store, the normal Apple
 distribution path is:
@@ -862,28 +757,11 @@ outside the Mac App Store.
 
 ------------------------------------------------------------------------
 
-# 28. Notarization
 
-Notarization is the Apple security submission process used for software
-distributed outside the Mac App Store.
 
-Do notarization only after the screen saver:
+# Recommended Packaging Sequence
 
--   builds successfully
--   installs successfully
--   previews successfully
--   runs correctly
--   has final bundle identifiers
--   has final signing configuration
-
-There is little value in notarizing a build that is still being changed
-during development.
-
-------------------------------------------------------------------------
-
-# 29. Recommended Packaging Sequence
-
-Use this order:
+Order
 
 ``` text
 1. Build Debug
@@ -901,11 +779,11 @@ Use this order:
 13. Test package on another Mac
 ```
 
-Do not jump directly to notarization before local testing is complete.
+
 
 ------------------------------------------------------------------------
 
-# 30. Runtime Behavior
+# Runtime Behavior
 
 The screen saver currently runs automatically.
 
@@ -931,7 +809,7 @@ No user controls are required.
 
 ------------------------------------------------------------------------
 
-# 31. Graphics
+# Graphics
 
 The current graphics are intentionally generated by code.
 
@@ -949,7 +827,7 @@ missing-resource packaging problems.
 
 ------------------------------------------------------------------------
 
-# 32. Adding Images Later
+# Adding Images Later
 
 If sprite images are added later:
 
@@ -976,21 +854,7 @@ inside the finished screen saver.
 
 ------------------------------------------------------------------------
 
-# 33. Adding Sound Later
-
-If sound effects or music are added:
-
-1.  Add the audio files to the project.
-2.  Enable target membership.
-3.  Verify they are copied into the bundle.
-4.  Load them from the screen saver bundle.
-
-Be aware that automatic audio from a screen saver may not be desirable
-in all environments. Audio behavior should therefore be intentional.
-
-------------------------------------------------------------------------
-
-# 34. Version Numbers
+# Version Numbers
 
 The initial project uses:
 
@@ -1019,7 +883,7 @@ Keep the bundle identifier stable once the project is being distributed.
 
 ------------------------------------------------------------------------
 
-# 35. Final Pre-Packaging Checklist
+# Final Pre-Packaging Checklist
 
 Before creating the final ZIP or DMG, verify:
 
@@ -1046,7 +910,7 @@ Before creating the final ZIP or DMG, verify:
 
 ------------------------------------------------------------------------
 
-# 36. Current Source List
+# Current Source List
 
 The complete current source set is:
 
@@ -1067,7 +931,7 @@ has deliberately been moved elsewhere.
 
 ------------------------------------------------------------------------
 
-# 37. Build Output
+#  Build Output
 
 The final development artifact you are looking for is:
 
